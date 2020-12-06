@@ -1,0 +1,28 @@
+<div>
+    <div class="container">
+        <table class="table">
+            <tbody *ngFor="let employee of employees">
+                <tr>
+                    <td>
+                        {{employee.employee_age}}
+                    </td>
+                    <td>
+                        {{employee.employee_name}}
+                    </td>
+                    <td>
+                        {{employee.employee_salary}}
+                    </td>
+                    <button class="btn btn-primary" (click)="update(employee.id)">
+                        update
+                    </button>
+                    <button class="btn btn-outline-primary ml-1" (click)="delete(employee.id)">
+                        delete
+                    </button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<button (click)="check()">
+    delete
+</button>
